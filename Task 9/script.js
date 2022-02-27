@@ -11,27 +11,26 @@ class Movie {
     this.title = title;
     this.director = director;
     this.budget = budget;
-
-    this.movieProperties = () => {
-      return ` Title: ${this.title} 
-      Director: ${this.director} 
-      Budget: ${this.budget}`;
+    this.wasExpensive = () => {
+      if (movieBudget.budget >= Number(100000000)) {
+        return "True";
+      } else {
+        return "False";
+      }
     };
   }
 }
 
-const movieBudget = new Movie("JsLabirintai", "Nerijus", Number("100000000"));
+const movieBudget = new Movie(
+  "JsLabirintai",
+  "Nerijus",
+  Number("100000000000000000")
+);
 
-console.log(movieBudget.movieProperties());
+console.log(movieBudget.budget, movieBudget.title);
 
-// 2
-
-this.wasExpensive = () => {
-  if (movieBudget.budget >= Number(100000000)) {
-    return "True";
-  } else {
-    return "False";
-  }
-};
-
-console.log(wasExpensive());
+// console.log(wasExpensive());
+// this.movieProperties = () => {
+//   return ` Title: ${this.title}
+//   Director: ${this.director}
+//   Budget: ${this.budget}`;

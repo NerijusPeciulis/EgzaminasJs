@@ -5,10 +5,10 @@ subtraction() - priima du skaičius ir grąžina jų skirtumą.
 multiplication() - priima du skaičius ir grąžina jų daugybos rezultatą;
 division() - priima du skaičius ir grąžina jų dalybos rezultatą;
 ------------------------------------------------------------------------------------ */
-function Calculator(a, b, result) {
+function Calculator(a, b) {
   this.a = a;
   this.b = b;
-  this.result = "";
+
   this.sum = () => {
     const result = this.a + this.b;
     return result;
